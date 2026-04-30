@@ -1,20 +1,23 @@
-VNBroker FINAL v4 - Force Icon Refresh
+VNBroker FINAL v5 - Responsive Mobile UI
 
-ใช้แพ็กนี้แทนไฟล์ชุดเดิมทั้งหมด
+เวอร์ชันนี้ปรับ UI ให้เหมาะกับมือถือหลายขนาด:
+- iPhone จอเล็ก/ใหญ่
+- Android จอเล็ก/ใหญ่
+- รองรับ safe-area / dynamic viewport
+- ปุ่มและช่องกรอกใหญ่พอสำหรับการแตะ
+- จอเล็กมากจะซ่อน badge และจัดช่องกรอกเป็น 1 คอลัมน์
+- Tablet จะขยายพื้นที่ใช้งานให้ดูไม่แคบเกินไป
 
 วิธีอัปโหลด:
 1) แตก ZIP
-2) ลากไฟล์ทั้งหมดเข้า GitHub repo Vnbroker ที่ root
-3) เลือก Commit changes
+2) อัปโหลดไฟล์ทั้งหมดเข้า root repo Vnbroker
+3) Commit changes
 4) รอ GitHub Pages deploy
 
-สำคัญมากสำหรับ iPhone:
-1) ลบไอคอน VNBroker เก่าบน Home Screen ก่อน
-2) เปิด Safari แล้วเข้า:
-   https://yeet00100.github.io/Vnbroker/slip-analyzer.html?v=4
-3) กด Share > Add to Home Screen ใหม่
+เปิดทดสอบ:
+https://yeet00100.github.io/Vnbroker/slip-analyzer.html?v=5
 
-ถ้ายังเห็นไอคอนเก่า:
-- เปิดลิงก์นี้ตรงๆ เพื่อตรวจว่าไฟล์ icon ใหม่ขึ้นหรือยัง:
-  https://yeet00100.github.io/Vnbroker/vnbroker-apple-icon-180.png
-- ถ้าเปิดแล้วไม่ใช่โลโก้ VN แปลว่ายังอัปโหลดไฟล์ไม่ครบหรือ GitHub Pages ยังไม่ deploy
+ถ้าไอคอนหรือ UI ไม่เปลี่ยน:
+- ลบ Home Screen shortcut เก่า
+- เปิดลิงก์ ?v=5
+- Add to Home Screen ใหม่

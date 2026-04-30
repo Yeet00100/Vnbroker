@@ -2,7 +2,7 @@
   "name": "VNBroker — สแกนสลิป",
   "short_name": "VNBroker",
   "description": "ระบบสแกนและวิเคราะห์สลิปโอนเงินอัตโนมัติ",
-  "start_url": "/Vnbroker/slip-analyzer.html?v=4",
+  "start_url": "/Vnbroker/slip-analyzer.html?v=6",
   "scope": "/Vnbroker/",
   "display": "standalone",
   "orientation": "portrait",

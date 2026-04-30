@@ -1,4 +1,4 @@
-const CACHE = 'vnbroker-v4';
+const CACHE = 'vnbroker-v6-responsive';
 const BASE = '/Vnbroker/';
 
 const ASSETS = [
