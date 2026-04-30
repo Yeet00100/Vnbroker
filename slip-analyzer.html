@@ -4,29 +4,35 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
+
 <!-- PWA -->
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#0b1f4a">
 
-<!-- iOS -->
+<!-- iOS Home Screen -->
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="VNBroker">
-<link rel="apple-touch-icon" href="icons/icon-180.png">
-<link rel="apple-touch-icon" sizes="152x152" href="icons/icon-152.png">
-<link rel="apple-touch-icon" sizes="144x144" href="icons/icon-144.png">
-<link rel="apple-touch-icon" sizes="128x128" href="icons/icon-128.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="152x152" href="icon-152.png">
+<link rel="apple-touch-icon" sizes="144x144" href="icon-144.png">
+<link rel="apple-touch-icon" sizes="128x128" href="icon-128.png">
 
-<!-- Android / Chrome -->
-<link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
-<link rel="icon" type="image/png" sizes="512x512" href="icons/icon-512.png">
-<link rel="icon" type="image/png" sizes="96x96"   href="icons/icon-96.png">
-<link rel="icon" type="image/png" sizes="72x72"   href="icons/icon-72.png">
+<!-- Android / Chrome / Browser Icons -->
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="favicon-48x48.png">
+<link rel="icon" type="image/png" sizes="72x72" href="icon-72.png">
+<link rel="icon" type="image/png" sizes="96x96" href="icon-96.png">
+<link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="icon-512.png">
 
 <!-- Windows -->
-<meta name="msapplication-TileImage" content="icons/icon-144.png">
+<meta name="msapplication-TileImage" content="icon-144.png">
 <meta name="msapplication-TileColor" content="#0b1f4a">
-<meta name="msapplication-config"    content="none">
+<meta name="msapplication-config" content="none">
 
 <title>VNBroker — สแกนสลิป</title>
 <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700;800&family=Cormorant+Garamond:wght@600;700&family=Chakra+Petch:wght@600;700&display=swap" rel="stylesheet">
@@ -185,7 +191,9 @@ let busy = false, audioCtx = null;
 // ── Service Worker registration ──
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('sw.js').catch(() => {});
+    navigator.serviceWorker.register('sw.js', { scope: './' })
+      .then(reg => reg.update())
+      .catch(() => {});
   });
 }
 
