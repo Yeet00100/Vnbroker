@@ -1,27 +1,20 @@
-VNBroker FINAL ready for GitHub Pages
+VNBroker FINAL v4 - Force Icon Refresh
 
-วิธีใช้:
-1) แตก ZIP นี้
-2) อัปโหลดไฟล์ทั้งหมดเข้า root ของ repo Vnbroker
-   ให้ไฟล์อยู่ระดับเดียวกันทั้งหมด เช่น:
-   /slip-analyzer.html
-   /manifest.json
-   /sw.js
-   /icon-192.png
-   /icon-512.png
-   /apple-touch-icon.png
-   /favicon.ico
+ใช้แพ็กนี้แทนไฟล์ชุดเดิมทั้งหมด
 
-3) Commit changes
+วิธีอัปโหลด:
+1) แตก ZIP
+2) ลากไฟล์ทั้งหมดเข้า GitHub repo Vnbroker ที่ root
+3) เลือก Commit changes
 4) รอ GitHub Pages deploy
-5) เข้าเว็บ:
-   https://<username>.github.io/Vnbroker/slip-analyzer.html
 
-ทดสอบ Home Screen:
-- iPhone: เปิดผ่าน Safari > Share > Add to Home Screen
-- Android: เปิดผ่าน Chrome > Install app / Add to Home screen
+สำคัญมากสำหรับ iPhone:
+1) ลบไอคอน VNBroker เก่าบน Home Screen ก่อน
+2) เปิด Safari แล้วเข้า:
+   https://yeet00100.github.io/Vnbroker/slip-analyzer.html?v=4
+3) กด Share > Add to Home Screen ใหม่
 
-ถ้าไอคอนไม่เปลี่ยน:
-- ลบ shortcut เก่าออก
-- ล้าง cache หรือรอ 1-5 นาที
-- เปิดเว็บใหม่แล้ว Add to Home Screen อีกครั้ง
+ถ้ายังเห็นไอคอนเก่า:
+- เปิดลิงก์นี้ตรงๆ เพื่อตรวจว่าไฟล์ icon ใหม่ขึ้นหรือยัง:
+  https://yeet00100.github.io/Vnbroker/vnbroker-apple-icon-180.png
+- ถ้าเปิดแล้วไม่ใช่โลโก้ VN แปลว่ายังอัปโหลดไฟล์ไม่ครบหรือ GitHub Pages ยังไม่ deploy

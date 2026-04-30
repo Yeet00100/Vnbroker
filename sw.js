@@ -1,23 +1,24 @@
-const CACHE = 'vnbroker-v3';
+const CACHE = 'vnbroker-v4';
 const BASE = '/Vnbroker/';
 
 const ASSETS = [
   BASE + 'slip-analyzer.html',
   BASE + 'manifest.json',
-  BASE + 'favicon.ico',
-  BASE + 'favicon-16x16.png',
-  BASE + 'favicon-32x32.png',
-  BASE + 'apple-touch-icon.png',
-  BASE + 'icon-72.png',
-  BASE + 'icon-96.png',
-  BASE + 'icon-128.png',
-  BASE + 'icon-144.png',
-  BASE + 'icon-152.png',
-  BASE + 'icon-180.png',
-  BASE + 'icon-192.png',
-  BASE + 'icon-384.png',
-  BASE + 'icon-512.png',
-  BASE + 'logo.png'
+  BASE + 'vnbroker-favicon.ico',
+  BASE + 'vnbroker-favicon-16.png',
+  BASE + 'vnbroker-favicon-32.png',
+  BASE + 'vnbroker-favicon-48.png',
+  BASE + 'vnbroker-apple-icon-180.png',
+  BASE + 'vnbroker-icon-72.png',
+  BASE + 'vnbroker-icon-96.png',
+  BASE + 'vnbroker-icon-128.png',
+  BASE + 'vnbroker-icon-144.png',
+  BASE + 'vnbroker-icon-152.png',
+  BASE + 'vnbroker-icon-180.png',
+  BASE + 'vnbroker-icon-192.png',
+  BASE + 'vnbroker-icon-384.png',
+  BASE + 'vnbroker-icon-512.png',
+  BASE + 'vnbroker-logo.png'
 ];
 
 self.addEventListener('install', event => {
@@ -38,12 +39,7 @@ self.addEventListener('activate', event => {
 
 self.addEventListener('fetch', event => {
   if (event.request.method !== 'GET') return;
-
   event.respondWith(
-    caches.match(event.request).then(cached => {
-      return cached || fetch(event.request).then(response => {
-        return response;
-      });
-    })
+    fetch(event.request).catch(() => caches.match(event.request))
   );
 });
